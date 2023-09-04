@@ -1,0 +1,3 @@
+curl -X POST http://localhost:8080/queue/send-msg \
+-H 'Content-Type: application/json' \
+-d '{"queuename": "books", "message" : {"title" : "Six of Crows", "author" : "Leigh Burdugo"}}'

@@ -1,3 +1,19 @@
+MacOS :
+brew install rabbitmq
+
+Rocky 9 linux
+sudo dnf install nodejs -y
+
+installn the project to download dependencies
+npm install
+
+1. docker rabbitmq
+docker run -d --hostname rabbitmq --name rabbitmq -p 15672:15672 -p 5672:5672 rabbitmq:3.7-management
+
+2. inside Docker enable management plugins
+rabbitmq-plugins enable rabbitmq_management
+
+
 curl -X POST http://localhost:8080/queue/send-msg \
 -H 'Content-Type: application/json' \
 -d '{"queuename": "books", "message" : {"title" : "Six of Crows", "author" : "Leigh Burdugo"}}'
